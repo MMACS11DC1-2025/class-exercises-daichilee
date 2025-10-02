@@ -7,4 +7,16 @@ You must design your algorithm in English first, then translate it to Python cod
 Test as you go! Describe in your comments what steps you took to test your code.
 """
 
+
+
+
 file = open("2.4/responses.csv")
+
+
+for line in file:
+    if "Daichi Lee" in line:
+        
+
+
+
+    
