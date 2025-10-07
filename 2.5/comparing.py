@@ -13,27 +13,27 @@ Test as you go! Describe in your comments what steps you took to test your code.
 file = open("2.4/responses.csv")
 data = file.readlines()
 
-print("This program is used to check if two people like the same sport")
+print("This program is used to check if two people like the same pet")
 firstPerson = input("What is the first person you want to input?")
-firstSport = None
+firstPet = None
 for line in data[1:]:
     info = line.strip().split(",")
     if info[1].strip().lower() == firstPerson.strip().lower():
-        firstSport = info[4].strip()
+        firstPet = info[3].strip()
         break
 
 secondPerson = input("What is the second person you want to input?")
-secondSport = None
+secondPet = None
 for line in data[1:]:
     info = line.strip().split(",")
     if info[1].strip().lower() == secondPerson.strip().lower():
-        secondSport = info[4].strip()
+        secondPet = info[3].strip()
         break
 
-if firstSport == secondSport:
-    print("You guys like the same sport!")
+if firstPet == secondPet:
+    print("You guys like the same pet!")
 else:
-    print("You guys do not like the same sport!")
+    print("You guys do not like the same pet!")
 
         
 
