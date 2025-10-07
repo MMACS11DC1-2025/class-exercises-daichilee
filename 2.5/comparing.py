@@ -11,12 +11,13 @@ Test as you go! Describe in your comments what steps you took to test your code.
 
 
 file = open("2.4/responses.csv")
+file.readlines()
 data = file.readlines()
 #i changed from sports to pet because like there is two sports in everybodys data 
 print("This program is used to check if two people like the same pet")
 firstPerson = input("What is the first person you want to input?")
 firstPet = None
-for line in data[1:]:
+for line in data:
     info = line.strip().split(",")
     if info[1].strip().lower() == firstPerson.strip().lower():
         firstPet = info[3].strip()
@@ -24,7 +25,7 @@ for line in data[1:]:
 
 secondPerson = input("What is the second person you want to input?")
 secondPet = None
-for line in data[1:]:
+for line in data:
     info = line.strip().split(",")
     if info[1].strip().lower() == secondPerson.strip().lower():
         secondPet = info[3].strip()
