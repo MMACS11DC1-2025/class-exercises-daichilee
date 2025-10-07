@@ -11,7 +11,7 @@ Test as you go! Describe in your comments what steps you took to test your code.
 
 
 file = open("2.4/responses.csv")
-file.readlines()
+file.readline()
 data = file.readlines()
 #i changed from sports to pet because like there is two sports in everybodys data 
 print("This program is used to check if two people like the same pet")
