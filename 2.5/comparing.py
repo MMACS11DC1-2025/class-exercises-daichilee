@@ -58,10 +58,10 @@ elif not firstPet == secondPet and not firstSubject == secondSubject:
 #Input 2: Theo Shim
 #Output: You guys like the same pet!
 
-#This code is used to determine if two different people you have inputted like the same pet through the data from the survey.
+#This code is used to determine if two different people you have inputted like the same pet and same subject through the data from the survey.
 #1.Start by stripping out the first header line in responses.csv
 #2.Then make a for loop to keep looping until it finds first inputted name
-#3.Strip out the pet(index 3) and make it first persons pet
+#3.Strip out the pet(index 3) and subject(index 4) make it first persons pet and subject
 #4.Repeat the same steps for person two
 #5.Make if statements to see if they are equal or not and print depending on results
 
