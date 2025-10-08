@@ -33,8 +33,11 @@ for line in data:
 
 if firstPet == secondPet:
     print("You guys like the same pet!")
-else:
+elif firstPet != secondPet:
     print("You guys do not like the same pet!")
+
+else:
+    print("You did not input a valid name. Please try again.")
 
 
 #Input 1: Daichi Lee
