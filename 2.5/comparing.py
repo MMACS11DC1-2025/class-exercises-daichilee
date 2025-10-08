@@ -8,7 +8,7 @@ Test as you go! Describe in your comments what steps you took to test your code.
 """
 
 
-
+#comments at bottom
 
 file = open("2.4/responses.csv")
 file.readline()
@@ -42,6 +42,11 @@ else:
 #Output: You guys like the same pet!
 
 #This code is used to determine if two different people you have inputted like the same pet through the data from the survey.
+#1.Start by stripping out the first header line in responses.csv
+#2.Then make a for loop to keep looping until it finds first inputted name
+#3.Strip out the pet(index 3) and make it first persons pet
+#4.Repeat the same steps for person two
+#5.Make if statements to see if they are equal or not and print depending on results
 
 
 
