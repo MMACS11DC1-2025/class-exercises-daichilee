@@ -31,13 +31,15 @@ for line in data:
         secondPet = info[3].strip()
         break
 
-if firstPet == secondPet:
+if firstPet == None or secondPet == None:
+    print("You did not input a valid name please try again.")
+
+elif firstPet == secondPet:
     print("You guys like the same pet!")
 elif not firstPet == secondPet:
     print("You guys do not like the same pet!")
 
-else:
-    print("You did not input a valid name. Please try again.")
+
 
 
 #Input 1: Daichi Lee
