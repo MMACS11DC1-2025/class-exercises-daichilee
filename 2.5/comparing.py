@@ -33,7 +33,7 @@ for line in data:
 
 if firstPet == secondPet:
     print("You guys like the same pet!")
-elif firstPet != secondPet:
+elif not firstPet == secondPet:
     print("You guys do not like the same pet!")
 
 else:
