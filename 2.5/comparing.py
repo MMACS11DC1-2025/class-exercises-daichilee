@@ -36,7 +36,12 @@ if firstPet == secondPet:
 else:
     print("You guys do not like the same pet!")
 
-        
+
+#Input 1: Daichi Lee
+#Input 2: Theo Shim
+#Output: You guys like the same pet!
+
+#This code is used to determine if two different people you have inputted like the same pet through the data from the survey.
 
 
 
