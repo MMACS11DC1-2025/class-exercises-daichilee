@@ -14,30 +14,42 @@ file = open("2.4/responses.csv")
 file.readline()
 data = file.readlines()
 #i changed from sports to pet because like there is two sports in everybodys data 
-print("This program is used to check if two people like the same pet")
+print("This program is used to check if two people like the same pet and if they like the same subject")
 firstPerson = input("What is the first person you want to input?")
 firstPet = None
+firstSubject = None
 for line in data:
     info = line.strip().split(",")
     if info[1].strip().lower() == firstPerson.strip().lower():
         firstPet = info[3].strip()
+        firstSubject = info[4].strip()
         break
+
 
 secondPerson = input("What is the second person you want to input?")
 secondPet = None
+secondSubject = None
 for line in data:
     info = line.strip().split(",")
     if info[1].strip().lower() == secondPerson.strip().lower():
         secondPet = info[3].strip()
+        secondSubject = info[4].strip()
         break
 
 if firstPet == None or secondPet == None:
     print("You did not input a valid name please try again.")
 
-elif firstPet == secondPet:
-    print("You guys like the same pet!")
-elif not firstPet == secondPet:
-    print("You guys do not like the same pet!")
+elif firstPet == secondPet and firstSubject == secondSubject:
+    print("You guys like the same pet and the same subject!")
+
+elif firstPet == secondPet and not firstSubject == secondSubject:
+    print("You guys like the same pet but not the same subject subject!")
+
+elif not firstPet == secondPet and firstSubject == secondSubject:
+    print("You guys do not like the same pet but like the same subject!")
+
+elif not firstPet == secondPet and not firstSubject == secondSubject:
+    print("You guys do not like the same pet and do not like the same subject!")
 
 
 
