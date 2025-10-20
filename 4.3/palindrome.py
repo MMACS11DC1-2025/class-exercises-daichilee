@@ -23,3 +23,35 @@ def isPalindrome(word):
 # Run the function on various words, a mix of palindromes and non-palindromes
 for word in ["pop", "racecar", "peep", "peep", "PEPPER", "palindrome"]:
     print("Is " + word + " a palindrome? " + str(isPalindrome(word)))
+
+import turtle
+
+def draw_tree(level, branch_length):
+    if level > 0:
+        turtle.forward(branch_length)
+
+        turtle.left(40)
+        draw_tree(level-1, branch_length/1.61)
+
+        turtle.right(80)
+        draw_tree(level-1, branch_length/1.61)
+
+        turtle.left(40)
+        turtle.back(branch_length)
+
+    else:
+        turtle.color("green")
+        turtle.stamp()
+        turtle.color("brown")
+
+turtle.speed(0)
+turtle.penup()
+turtle.goto(0, -180)
+turtle.left(90)
+turtle.pendown()
+
+turtle.color("brown")
+turtle.width(3)
+turtle.shape("triangle")
+
+drawTree(2, 120)
