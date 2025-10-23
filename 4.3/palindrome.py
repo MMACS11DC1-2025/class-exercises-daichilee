@@ -54,6 +54,5 @@ turtle.color("brown")
 turtle.width(3)
 turtle.shape("triangle")
 
-drawTree(2, 120)
 
 
