@@ -7,7 +7,9 @@ Write recursive functions for each of the following problems:
 # Remember that n! is defined as n * (n-1)! and 0! is 1
 def factorial(n):
     # TODO implement this
-    return 1
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
 
 print(factorial(1)) # Expected output: 1
 print(factorial(2)) # Expected output: 2
@@ -20,8 +22,10 @@ print(factorial(5)) # Expected output: 120
 # Remember that x^y is defined as x * x^(y-1) and x^0 is 1.
 
 def power(x, y):
-    # TODO implement this
-    return 1
+    if y == 0:
+        return 1
+    elif y > 0:
+        return x ** y
 
 # Test cases
 print(power(2, 3))  # Expected output: 8
