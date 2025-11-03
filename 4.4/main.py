@@ -1,58 +1,47 @@
 import turtle
 
-
-def drawsquare(pen, size):
-    """Draw a single square with side `size` using turtle `pen`."""
+def draw_square(t, side):
     for _ in range(4):
-        pen.forward(size)
-        pen.left(90)
+        t.forward(side)
+        t.left(90)
 
-
-def prompt_int(prompt, default=9, min_val=1, max_val=100):
-    s = None
-    try:
-        screen = turtle.Screen()
-        s = screen.textinput("Input", "{} [{}]:".format(prompt, default))
-    except Exception:
-        try:
-            s = input("{} [{}]: ".format(prompt, default))
-        except (EOFError, KeyboardInterrupt):
-            return default
-
-    if s is None:
-        return default
-    s = s.strip()
-    if s == "":
-        return default
-    try:
-        v = int(s)
-    except ValueError:
-        return default
-    if min_val is not None and v < min_val:
-        return min_val
-    if max_val is not None and v > max_val:
-        return max_val
-    return v
-
+def recursive(t, num_squares, side, rotation):
+    if num_squares == 0:
+        return
+    t.penup()
+    t.goto(0, 0)
+    t.pendown()
+    draw_square(t, side)
+    t.right(rotation)
+    recursive(t, num_squares - 1, side + 3, rotation)
 
 def main():
-    count = prompt_int("How many squares to draw?", 9, min_val=1, max_val=100)
-    size = 100
-    angle = 40
+    num_squares = input("How many squares to draw? Default is 1: ").strip()
+    if num_squares == "" or not num_squares.isdigit():
+        num_squares = 1
+    else:
+        num_squares = int(num_squares)
+        num_squares = max(1, min(num_squares, 100))
 
-    pen = turtle.Turtle()
-    pen.hideturtle()
-    pen.speed(0)
+    valid_colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"]
+    color = ""
+    while color not in valid_colors:
+        color = input("What color do you want the squares? Default is blue: ").strip()
+        if color == "":
+            color = "blue"
+        if color not in valid_colors:
+            print("Invalid color! Try again. Valid colors are:", valid_colors)
 
-    for _ in range(count):
-        pen.penup()
-        pen.goto(0, 0)   
-        pen.pendown()
-        drawsquare(pen, size)
-        pen.right(angle)
+    side = 1
+    rotation = 15
+
+    t = turtle.Turtle()
+    t.hideturtle()
+    t.speed(0)
+    t.color(color)
+
+    recursive(t, num_squares, side, rotation)
 
     turtle.done()
 
-
-if __name__ == "__main__":
-    main()
+main()
