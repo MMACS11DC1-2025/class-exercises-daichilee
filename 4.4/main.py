@@ -1,5 +1,9 @@
 import turtle
 
+t = turtle.Turtle()
+t.hideturtle()
+t.speed(0)
+
 def draw_square(t, side):
     for _ in range(4):
         t.forward(side)
@@ -29,17 +33,13 @@ while color not in valid_colors:
     if color == "":
         color = "blue"
     if color not in valid_colors:
-        print("Invalid color! Try again. Valid colors are:", valid_colors)
+        print("Invalid color! Valid colors are:", valid_colors)
 
 side = 1
 rotation = 15
 
-t = turtle.Turtle()
-t.hideturtle()
-t.speed(0)
 t.color(color)
 
 recursive(t, num_squares, side, rotation)
-
 turtle.done()
 
