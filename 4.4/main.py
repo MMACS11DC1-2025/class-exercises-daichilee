@@ -23,8 +23,7 @@ num_squares = input("How many squares to draw? Default is 1: ").strip()
 if num_squares == "" or num_squares != num_squares.isdigit:
     num_squares = 1
 else:
-    num_squares = int(num_squares)
-    num_squares = max(1, min(num_squares, 1000))
+    num_squares = max(1, min(int(num_squares), 1000))
 
 valid_colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"]
 color = ""
