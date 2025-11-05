@@ -21,10 +21,15 @@ def recursive(t, num_squares, side, rotation):
 
 num_squares = input("How many squares to draw? Default is 1: ").strip()
 if num_squares == "" or not num_squares.isdigit():
-    num_squares = 1
-else:
-    num_squares = max(1, min(int(num_squares), 1000))
+  num_squares = 1
 
+elif int(num_squares) > 1000:
+  num_squares = 1000
+  
+elif int(num_squares) < 1:
+  num_squares = 1
+  
+print(num_squares)
 valid_colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"]
 color = ""
 while color not in valid_colors:
