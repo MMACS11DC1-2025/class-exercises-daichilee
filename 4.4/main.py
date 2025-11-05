@@ -5,6 +5,9 @@ t = turtle.Turtle()
 t.hideturtle()
 t.speed(0)
 
+#Recursion count variable
+numRecursion = 0
+
 #function to draw squares
 def draw_square(t, side):
     for _ in range(4):
@@ -13,9 +16,15 @@ def draw_square(t, side):
 
 #recursive function that adds 1 to side and -1 to number of times will draw per loop. goes back to center every time
 def recursive(t, num_squares, side, rotation):
+
+    #make it so this function can access the variable
+    global numRecursion
     #end case stops here
     if num_squares == 0:
         return
+    #add 1 per run
+    numRecursion += 1
+
     t.penup()
     t.goto(0, 0)
     t.pendown()
@@ -55,5 +64,8 @@ t.color(color)
 
 #call recusive function
 recursive(t, num_squares, side, rotation)
+
+#print total recursion calls
+print("Total recursive calls: " + str(numRecursion))
 turtle.done()
 
