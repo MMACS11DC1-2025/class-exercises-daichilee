@@ -9,6 +9,8 @@
 
 #Lastly, I added variable numRecursion that adds one every time it is ran in the function recursive so total recursion calls can be printed at the end of the program.
 
+#Changed numRecursion logic to match criteria of returning value. Adds 1+ recursive call to do the same thing
+
 EXAMPLE CASES:
 
 How many squares to draw? Default is 1:  12

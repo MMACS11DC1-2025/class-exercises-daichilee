@@ -14,15 +14,14 @@ def draw_square(t, side):
 
 #recursive function that adds 1 to side and -1 to number of times will draw per loop. goes back to center every time
 def recursive(t, num_squares, side, rotation):
-
-    #make it so this function can access the variable
     #end case stops here
     if num_squares == 0:
         return 0
-
+    
     t.penup()
     t.goto(0, 0)
     t.pendown()
+    #calls draw_square to draw square per recursion then modifies each one via size and rotation
     draw_square(t, side)
     t.right(rotation)
     #adds one to count for total recursion calls
@@ -38,6 +37,7 @@ else:
         num_squares = 1000
     elif num_squares < 1:
         num_squares = 1
+
 #check to see if program gets right input also just for user clarification
 print("You inputted " + str(num_squares))
 
@@ -58,8 +58,7 @@ rotation = 15
 
 t.color(color)
 
-
-#print total recursion calls and calls functgion
+#print total recursion calls and calls function
 numRecursion = recursive(t, num_squares, side, rotation)
 print("Total recursive calls: " + str(numRecursion))
 turtle.done()
