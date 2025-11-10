@@ -11,7 +11,7 @@
 
 #Changed numRecursion logic to match criteria of returning value. Adds 1+ recursive call to do the same thing
 
-#Changed settings into a dictionary to make it easier to read and fufill criteria
+#Changed settings into a dictionary to make it easier to read and fufill criteria. also made it non case sensitive for color inputs
 EXAMPLE CASES:
 
 How many squares to draw? Default is 1:  12
