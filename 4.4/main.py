@@ -11,6 +11,14 @@ def draw_square(t, side):
         t.forward(side)
         t.left(90)
 
+#make dictionary
+settings = {
+    'default_color': 'blue',
+    'side': 1,
+    'rotation': 15,
+    'valid_colors': ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"]
+}
+
 #recursive function that adds 1 to side and -1 to number of times will draw per loop to get down to base case. Goes back to center every time
 def recursive(t, num_squares, side, rotation):
     #end case stops here
@@ -25,15 +33,8 @@ def recursive(t, num_squares, side, rotation):
     #adds one to count for total recursion calls
     return 1+ recursive(t, num_squares - 1, side + 1, rotation)
 
-#make dictionary
-settings = {
-    'default_color': 'blue',
-    'side': 1,
-    'rotation': 15,
-    'valid_colors': ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"]
-}
 
-#get user input
+#get user input on how many squares
 num_squares = input("How many squares to draw? Default is 1: ").strip()
 if num_squares == "" or not num_squares.isdigit():
     num_squares = 1
@@ -47,11 +48,11 @@ else:
 #check to see if program gets right input also just for user clarification
 print("You inputted " + str(num_squares))
 
-#make list of valid colors
+#initialize color variable 
 color = ""
 #while loop to check for right color
 while color not in settings['valid_colors']:
-    color = input("What color do you want the squares? Default is " + settings['default_color'] + ": ").strip()
+    color = input("What color do you want the squares? Default is " + settings['default_color'] + ": ").strip().lower()
     if color == "":
         color = settings['default_color']
     if color not in settings['valid_colors']:
