@@ -13,10 +13,10 @@ def draw_square(t, side):
 
 #make dictionary
 settings = {
-    'default_color': 'blue',
-    'side': 1,
-    'rotation': 15,
-    'valid_colors': ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"]
+    "default_color": "blue",
+    "side": 1,
+    "rotation": 15,
+    "valid_colors": ["red", "blue", "green", "yellow", "orange", "purple", "pink", "black", "white"]
 }
 
 #recursive function that adds 1 to side and -1 to number of times will draw per loop to get down to base case. Goes back to center every time
@@ -51,17 +51,17 @@ print("You inputted " + str(num_squares))
 #initialize color variable 
 color = ""
 #while loop to check for right color
-while color not in settings['valid_colors']:
-    color = input("What color do you want the squares? Default is " + settings['default_color'] + ": ").strip().lower()
+while color not in settings["valid_colors"]:
+    color = input("What color do you want the squares? Default is " + settings["default_color"] + ": ").strip().lower()
     if color == "":
-        color = settings['default_color']
-    if color not in settings['valid_colors']:
-        print("Invalid color! Valid colors are:", settings['valid_colors'])
+        color = settings["default_color"]
+    if color not in settings["valid_colors"]:
+        print("Invalid color! Valid colors are:", settings["valid_colors"])
 
 
 #make settings from dictionary into normal variable names
-side = settings['side']
-rotation = settings['rotation']
+side = settings["side"]
+rotation = settings["rotation"]
 #set turtle to inputted color
 t.color(color)
 
