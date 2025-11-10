@@ -58,10 +58,14 @@ while color not in settings['valid_colors']:
     if color not in settings['valid_colors']:
         print("Invalid color! Valid colors are:", settings['valid_colors'])
 
-#set turtle to inputed color
+
+#make settings from dictionary into normal variable names
+side = settings['side']
+rotation = settings['rotation']
+#set turtle to inputted color
 t.color(color)
 
 #print total recursion calls by return + 1 value and calls function in one line
-numRecursion = recursive(t, num_squares, settings['side'], settings['rotation'])
+numRecursion = recursive(t, num_squares, side, rotation)
 print("Total recursive calls: " + str(numRecursion))
 turtle.done()
