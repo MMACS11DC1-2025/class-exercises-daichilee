@@ -77,7 +77,7 @@ You'll create a fractal generator that can draw at least one recursive pattern (
 2. **README.md** - Documentation file with all required content.
 2. **PROJECT.md** - This file, self-graded with checklist.
 
-### **Required Documentation Content Summary:**
+### **Required Documentation Content Summary:** 
 - Project overview
 - Explanation of your recursive approach and why it works
 - How to run the program

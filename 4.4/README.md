@@ -33,5 +33,6 @@ What color do you want the squares? Default is blue:  yellow
 DRAWING:
 Total recursive calls: 1
 
-
+Thoughts:
+Minimum depth should be atleast greater than 50 recursions to see a meaningful design. However my minimum is set to 1 and max is set to 1000 if user wants to play around.
 Peer review done by Marko.
