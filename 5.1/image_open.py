@@ -9,3 +9,10 @@ def isGreen(r,g,b):
 
 image_green = Image.open("5.1/kid-green.jpg").load()
 image_beach = Image.open("5.1/beach.jpg").load()
+
+
+
+
+
+
+
