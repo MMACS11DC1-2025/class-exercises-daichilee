@@ -73,8 +73,8 @@ for i in range(len(name_sorted)):
             min_index = x
     name_sorted[i], name_sorted[min_index] = name_sorted[min_index], name_sorted[i]
 
-query = input("Enter an image name to find its redness position: ")
-index = binary_search_name(name_sorted, query)
+question = input("Enter an image name to find its redness position: ")
+index = binary_search_name(name_sorted, question)
 
 if index == -1:
     print("That image is not in the list.")
