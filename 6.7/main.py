@@ -41,10 +41,11 @@ print("Pixel analysis took {:.3f} seconds.".format(end_time - start_time))
 
 for i in range(len(picture_data)):
     max_index = i
-    for x in range(i + 1, len(picture_data)):
+    for x in range(i, len(picture_data)):
         if picture_data[x][1] > picture_data[max_index][1]:
             max_index = x
     picture_data[i], picture_data[max_index] = picture_data[max_index], picture_data[i]
+
 
 print("Sorted red percentages (high -> low):", picture_data)
 
