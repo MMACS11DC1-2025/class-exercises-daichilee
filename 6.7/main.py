@@ -83,6 +83,5 @@ else:
     image_name = name_sorted[index][0]
     for position in range(len(picture_data)):
         if picture_data[position][0] == image_name:
-            
             print("{} is ranked #{} in redness ({}% red).".format(image_name, position + 1, picture_data[position][1]))
             break
